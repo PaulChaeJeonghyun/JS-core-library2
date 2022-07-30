@@ -5,16 +5,42 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>StringClass-1</title>
+   <title>StringClass-2(charAt())</title>
+   <style>
+      #print {
+         width: 500px;
+         height: 300px;
+         text-align: center;
+         line-height: 150px;
+         vertical-align: middle;
+         border: 2px solid #f00;
+      }
+   </style>
+   <script src="lib/jquery-3.6.0.min.js"></script>
    <script>
-      //Get the length of provided string from user
-      let str = window.prompt("Enter some string.");
-      alert("String length : " + str.length);
+      $(document).ready(function () {
+         let str = window.prompt("Enter some string.");
+         let $print = $("#print");
+         let index = 0;
+         let timerID = setInterval(function () {
+            let ch = str.charAt(index);
+            //print the string
+            $print.text(ch);
+            //for next string, need to increase index
+            index++;
+
+            //Stop timer when all string printed
+            if (index > str.length) {
+               clearInterval(timerID);
+               alert("String print end");
+            }
+         }, 1000);
+      })
    </script>
 </head>
 
 <body>
-
+   <div id="print"></div>
 </body>
 
 </html>
