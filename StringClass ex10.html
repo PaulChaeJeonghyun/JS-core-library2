@@ -10,8 +10,20 @@
    <script>
       let str = "  Hello   World   Paul   is       coding    ";
       console.log("Original string:" + str);
+
+      //regular expressions
+      // ^ : finding the first of input
+      // $ : finding the last of input
+      // * : finding the letter more than 0 time(ex "zo*" then found "z" or "zoo")
+      // + : finding the letter more than 1 time(ex "zo+" then found "zoo" no "z" )
+      // ? : finding the letter more than 0 time(ex "goo?gle?" then found "gle")
+      // \s : finding space
+      // \S : finding no space 
+      // g: global finding
+
       console.log("All space delete:" + str.replace(/(\s*)/g, ""));
-      console.log("left space delete:" + str.replace(/^\s*)/, ""));
+      console.log("left space delete:" + str.replace(/(^\s*)/, ""));
+      console.log("right space delete:" + str.replace(/(\s*$)/, ""));
    </script>
 </head>
 
