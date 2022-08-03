@@ -42,6 +42,11 @@
             let time = hour + ":" + minute + ":" + second;
             $clock.html(time);
          }
+         showClock();
+
+         setInterval(function () {
+            showClock()
+         }, 500);
       }
    </script>
 </head>
