@@ -6,6 +6,20 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Date Class(print present time)</title>
+   <script src="lib/jquery-3.6.0.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         let $print = $("#print");
+
+         let date = new Date();
+         let hour = date.getHours();
+         let minute = date.getMinutes();
+         let second = date.getSeconds();
+         let msecond = date.getMilliseconds();
+
+         $print.html(hour + ":" + minute + ":" + second + "." + msecond + "ms");
+      })
+   </script>
    <style>
       #print {
          width: 500px;
