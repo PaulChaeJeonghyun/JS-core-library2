@@ -15,6 +15,35 @@
          border: 3px solid red;
       }
    </style>
+   <script src="lib/jquery-3.6.0.min.js"></script>
+   <script>
+      let $clock = null;
+      $(document).ready(function () {
+         $clock = $("#clock");
+         //Printing time function
+         clock();
+      });
+
+      function clock() {
+         // when it less than 10, make 00 nested function
+         function addZero(value) {
+            if (value < 10) {
+               value = "0" + value;
+            }
+            return value;
+         }
+         //present time
+         function showClock() {
+            let date = new Date();
+            let hour = addZero(date.getHours());
+            let minute = addZero(date.getMinutes());
+            let second = addZero(date.getSeconds());
+
+            let time = hour + ":" + minute + ":" + second;
+            $clock.html(time);
+         }
+      }
+   </script>
 </head>
 
 <body>
