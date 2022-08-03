@@ -22,6 +22,21 @@
          margin-left: 15px;
       }
    </style>
+   <script src="lib/jquery-3.6.0.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         let $menu = $("#menu");
+         let menuData = "Menu2,Menu3,Menu4,Menu5";
+
+         let menuItems = menuData.split(",");
+
+         for (let i = 0; i < menuItems.length; i++) {
+            let newItem = "<li>" + menuItems[i] + "</li>";
+
+            $menu.append(newItem);
+         }
+      })
+   </script>
 </head>
 
 <body>
