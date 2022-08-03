@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>ArrayClass(length)</title>
+   <title>ArrayClass(length) ArrayClass ex14:1</title>
    <script>
       //Making string type`s array by literal format
       let clients = ["clients1", "clients2", "clients3", "clients4", "clients5",]
-      document.write("clients array`s length : " + clients.length);
+      document.write("clients array`s length : " + clients.length + "<br>");
+
+      for (let i = 0; i < clients.length; i++) {
+         let client = clients[i];
+         document.write("clients[ " + i + " ] : " + client + "<br>");
+      }
+
    </script>
 </head>
 
