@@ -10,7 +10,13 @@
       let menus = ["menu1", "menu2", "menu3", "menu4",];
       document.write("Before : " + menus.join(",") + "<br>");
       menus.push("menu5");
-      document.write("After : " + menus.join(",") + "<br>");
+      document.write("After push : " + menus.join(",") + "<br>");
+
+      menus.unshift("menu0");
+      document.write("After unshift() : " + menus.join(",") + "<br>");
+
+      menus.splice(2, 0, "add menu");
+      document.write("After splice() : " + menus.join(",") + "<br>");
 
    </script>
 </head>
