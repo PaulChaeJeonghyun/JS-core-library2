@@ -7,10 +7,19 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>ArrayClass(Sorting)</title>
    <script>
-      let names = ["Paul", "Andre", "Kim", "Jay", "Saul"];
-      document.write("Before : " + names.join() + "<br>");
-      names.sort();
-      document.write("After sorting : " + names.join() + "<br>");
+      let descNames = ["Paul", "Andre", "Kim", "Jay", "Saul"];
+      document.write("Before : " + descNames.join() + "<br>");
+      descNames.sort();
+      document.write("After sorting : " + descNames.join() + "<br>");
+
+      let ascNames = ["Paul", "Andre", "Kim", "Jay", "Saul"];
+      document.write("Before : " + ascNames.join() + "<br>");
+      //
+      ascNames.sort(function (a, b) {
+         if (a > b) return -1;
+         if (a < b) return 1;
+      });
+      document.write("After sorting : " + ascNames.join() + "<br>");
 
    </script>
 </head>
