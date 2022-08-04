@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ArrayClass(Delete Array)</title>
+   <script>
+      let menus = ["menu1", "menu2", "menu3", "menu4",];
+      document.write("Before : " + menus.join(",") + "<br>");
+      // shift() : Delete 1st index in array
+      menus.shift();
+      document.write("1st index delete : " + menus.join(",") + "<br>");
+      // pop(): delete last index is array
+      menus.pop();
+      document.write("last index delete : " + menus.join(",") + "<br>");
+      //splice() : delete #th index
+      let menus1 = ["menu1", "menu2", "menu3", "menu4",];
+      menus1.splice(2, 1); //from 2nd index delete to 1 index
+      document.write("Nth index delete : " + menus1.join(",") + "<br>");
+
+
+
+
+   </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
