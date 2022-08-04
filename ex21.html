@@ -29,7 +29,19 @@
       $(document).ready(function () {
          let $arrBanner = $(".arrBanner");
          let i = 0;
-         let imgList = ["england.png", "germany.png", "italia.png", "korea.png", "spain.png", "usa.png", "world.png"];
+         let imgList = ["england.png", "germany.png", "italia.png", "korea.png", "spain.png", "usa.png", "canada.png", "world.png"];
+
+         setInterval(function () {
+            i++; //next index
+            //set index 0 when index range same
+            if (i >= imgList.length) {
+               i = 0;
+            }
+            //get image`s name in array
+            let imgName = imgList[i];
+            //print images
+            $arrBanner.attr("src", "img/" + imgName);
+         }, 1000);
       });
    </script>
 </head>
