@@ -7,8 +7,13 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>sum array</title>
    <script>
-      let arr = [1, 5, 10, 55, 100];
+      //let arr = [1, 5, 10, 55, 100, 500];
+      let arr = [0, 0, 0, 0, 0];
       let sum = 0;
+
+      for (let i = 0; i < arr.length; i++) {
+         arr[i] = parseInt(window.prompt("Enter number"));
+      }
 
       for (let i = 0; i < arr.length; i++) {
          sum += arr[i];
